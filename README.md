@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # KRehab
 
 ## Framework7 CLI Options
@@ -57,6 +56,3 @@ framework7 generate-assets --ui
 
 Love Framework7? Support project by donating or pledging on patreon:
 https://patreon.com/vladimirkharlampidi
-=======
-# iot_rehab
->>>>>>> 9a98185cc8bfbd87634ff076029c162963df3eb5
