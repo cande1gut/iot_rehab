@@ -1,3 +1,32 @@
+#login-screen{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#login-video{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#login-screen > .block{
+  width: 90%;
+  background-color: rgba(255, 255, 255, .5);
+  backdrop-filter: blur(3px);
+  border-radius: 5px;
+}
+
+#menu-fab{
+  position: fixed !important;
+}
+
+.card-expandable.card-opened{
+  z-index: 2000 !important;
+}
+
 .cardExercise-image{
   -webkit-background-size: cover !important;
   -moz-background-size: cover !important;
@@ -5,7 +34,16 @@
   background-size: cover !important;
 }
 
-#sense-image{
+.status-chip{
+  background: none !important
+}
+
+.calibration-icon{
+  background-color: white;
+  border-radius: 50%;
+}
+
+#sens-image{
   background: url(../assets/img/joint.jpg) no-repeat 50% 45%;
 }
 
@@ -20,4 +58,66 @@
 .frost-header{
   background-color: rgba(255, 255, 255, .5);
   backdrop-filter: blur(3px);
+}
+
+.card-content-padding > .block-title{
+  overflow: visible !important;
+}
+
+.card-content-padding > .list{
+  margin: 0 !important;
+}
+
+.menu-container{
+  width: 100%;
+  height: 40px;
+}
+
+.sensor-menu{
+  float: right;
+}
+
+.sensor-menu > .menu-inner{
+  display: block !important;
+  padding: 0 !important;
+}
+
+.sensor-menu > .menu-inner > .menu-item{
+  background: none !important;
+}
+
+.sensor-menu > .menu-inner > .menu-item > .menu-dropdown{
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 0 20px;
+}
+
+.sensor-menu > .menu-inner > .menu-item > .menu-dropdown > .menu-dropdown-content > .menu-dropdown-link{
+  min-width: auto !important;
+}
+
+.demo-facebook-card .card-header {
+  display: block;
+  padding: 10px;
+}
+.demo-facebook-card .demo-facebook-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+.demo-facebook-card .card-footer {
+  background: #fafafa;
+}
+.demo-facebook-card .card-footer a {
+  color: #81848b;
+  font-weight: 500;
+}
+.demo-facebook-card .card-content img {
+  display: block;
+}
+.demo-facebook-card .card-content-padding {
+  padding: 15px 10px;
+}
+.demo-facebook-card .card-content-padding .likes {
+  color: #8e8e93;
 }
