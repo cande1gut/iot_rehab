@@ -1,0 +1,89 @@
+<div class="page" data-name="criteria">
+  <div id="criteria-nav" class="navbar navbar-large navbar-transparent">
+    <div class="navbar-bg"></div>
+    <div class="navbar-inner sliding">
+      <div class="right">
+        <a class="link back color-red">
+          Cancel
+        </a>
+      </div>
+      <div class="title">Update Criteria</div>
+      <div class="title-large">
+        <div class="title-large-text">Update Criteria</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="register-screen" class="page-content">
+    <form id="register-form">
+      <div class="list no-hairlines-md margin-vertical-half">
+        <ul>
+          <li class="item-content item-input">
+            <div class="item-media">
+              <i class="f7-icons">info</i>
+            </div>
+            <div class="item-inner">
+              <div class="item-title item-floating-label">Age</div>
+              <div class="item-input-wrap">
+                <input type="text" placeholder="Your age" validate pattern="[0-9]*" data-error-message="Enter a valid age">
+                <span class="input-clear-button"></span>
+              </div>
+            </div>
+          </li>
+          <li class="item-content item-input">
+            <div class="item-media">
+              <i class="f7-icons">info</i>
+            </div>
+            <div class="item-inner">
+              <div class="item-title item-floating-label">BMI</div>
+              <div class="item-input-wrap">
+                <input type="text" placeholder="Your current BMI" validate pattern="[0-9]+([,\.][0-9]+)?" data-error-message="Enter a valid BMI">
+                <span class="input-clear-button"></span>
+              </div>
+            </div>
+          </li>
+          <li class="item-content item-input">
+            <div class="item-media">
+              <i class="f7-icons">info</i>
+            </div>
+            <div class="item-inner">
+              <div class="item-title item-floating-label">Height</div>
+              <div class="item-input-wrap">
+                <input type="text" placeholder="Your current height" validate pattern="[0-9]+([,\.][0-9]+)?" data-error-message="Enter a valid height">
+                <span class="input-clear-button"></span>
+              </div>
+            </div>
+          </li>
+          <li class="item-content item-input">
+            <div class="item-media">
+              <i class="f7-icons">info</i>
+            </div>
+            <div class="item-inner">
+              <div class="item-title item-floating-label">Weight</div>
+              <div class="item-input-wrap">
+                <input type="text" placeholder="Your current weight" validate pattern="[0-9]+([,\.][0-9]+)?" data-error-message="Enter a valid weight">
+                <span class="input-clear-button"></span>
+              </div>
+            </div>
+          </li>
+          <li class="item-content item-input">
+            <div class="item-media">
+              <i class="f7-icons">pencil</i>
+            </div>
+            <div class="item-inner">
+              <div class="item-title item-floating-label">Medical Conditions</div>
+              <div class="item-input-wrap">
+                <textarea class="resizable"></textarea>
+              </div>
+            </div>
+          </li>
+          <li class="row display-flex justify-content-center">
+            <div class="col-50">
+              <button id="save-button" class="button color-blue button-large button-raised button-fill button-round margin-bottom-half margin-top">Save</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </form>
+  </div>
+</div>

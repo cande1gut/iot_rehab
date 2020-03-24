@@ -17,7 +17,7 @@
   <meta name="theme-color" content="#007aff">
   <meta name="format-detection" content="telephone=no">
   <meta name="msapplication-tap-highlight" content="no">
-  <title>KRehab</title>
+  <title>K-Rehab</title>
 
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -35,38 +35,46 @@
   <div id="app">
     <div class="view view-main">
       <div class="page" data-name="login">
-        <div id="login-screen" class="page-content login-screen-content">
+        <div id="login-screen" class="page-content login-screen-content display-flex justify-content-center align-items-center">
           <video autoplay muted loop id="login-video">
             <source src="assets/video/bg.mp4" type="video/mp4">
           </video>
           <div class="block">
-            <div class="login-screen-title">K-Rehab</div>
-              <div class="list">
-                <ul>
-                  <li class="item-content item-input">
-                    <div class="item-inner">
-                      <div class="item-title item-label">Username</div>
-                      <div class="item-input-wrap">
-                        <input type="text" name="username" placeholder="Your username">
-                      </div>
+            <div class="login-screen-title margin-bottom-half">K-Rehab</div>
+            <div class="list no-hairlines-md no-margin-top">
+              <ul>
+                <li class="item-content item-input">
+                  <div class="item-media">
+                    <i class="f7-icons">envelope_fill</i>
+                  </div>
+                  <div class="item-inner">
+                    <div class="item-title item-floating-label">E-mail</div>
+                    <div class="item-input-wrap">
+                      <input type="email" placeholder="Your e-mail">
+                      <span class="input-clear-button"></span>
                     </div>
-                  </li>
-                  <li class="item-content item-input">
-                    <div class="item-inner">
-                      <div class="item-title item-label">Password</div>
-                      <div class="item-input-wrap">
-                        <input type="password" name="password" placeholder="Your password">
-                      </div>
+                  </div>
+                </li>
+                <li class="item-content item-input">
+                  <div class="item-media">
+                    <i class="f7-icons">lock_fill</i>
+                  </div>
+                  <div class="item-inner">
+                    <div class="item-title item-floating-label">Password</div>
+                    <div class="item-input-wrap">
+                      <input type="password" placeholder="Your password">
+                      <span class="input-clear-button"></span>
                     </div>
-                  </li>
-                </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="block row col-50 display-flex justify-content-center">
+              <div class="col-60">
+                <button id="login-button" class="button color-blue button-large button-raised button-fill button-round margin-bottom-half">Login</button>
+                <button id="register-button" class="button color-blue button-large button-round button-outline popup-open">Register</button>
               </div>
-              <div class="block">
-                <p class="row">
-                  <button id="login-button" class="col-100 button button-large button-raised button-fill">Login</button>
-                  <button class="col button button-large">Register</button>
-                </p>
-              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -79,6 +87,7 @@
   <!-- App routes -->
   <script src="js/routes.js"></script>
   <!-- App scripts -->
+  <script src="js/timer.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>
