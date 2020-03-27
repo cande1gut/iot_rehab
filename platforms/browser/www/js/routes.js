@@ -25,9 +25,9 @@ var routes = [
     },
   },
   {
-    name: 'warmup',
-    path: '/warmup/',
-    url: './pages/warmup.html',
+    name: 'assessment',
+    path: '/assessment/',
+    url: './pages/assessment.html',
     options: {
       transition: 'f7-push',
     },
@@ -41,6 +41,7 @@ var routes = [
     },
   },
   {
+    name: 'programs',
     path: '/programs/',
     url: './pages/programs.html',
     options: {
@@ -48,8 +49,9 @@ var routes = [
     },
   },
   {
-    path: '/patientHistory/',
-    url: './pages/patientHistory.html',
+    name: 'stats',
+    path: '/stats/',
+    url: './pages/stats.html',
     options: {
       transition: 'f7-circle',
     },

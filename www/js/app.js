@@ -239,28 +239,22 @@ var grip = {
     },
     onData: function(buffer){ // data received from MetaWear
       var data = new Uint16Array(buffer, 0, 5);
-      console.log(JSON.stringify(data));
+      //console.log(JSON.stringify(data));
       var runningMeasure = data[1];
       var measureWithoutForce = 63998;
       var coeff = 0.004;
       var force = Math.abs(runningMeasure-measureWithoutForce)*coeff;
+      var percentage = force/35;
+      var forceStr = force.toString();
+      var forceNum = forceStr.slice(0, (forceStr.indexOf("."))+3);
 
-      /*if (data[0] === 1 && data[1] === 1) { // module = 1, opscode = 1
-        if (data[2] === 1) { // button state
-            message = "Button pressed";
-        } else {
-            message = "Button released";
-        }
-      }*/
+      warmupGauge.update({
+        value: percentage,
+        valueText: forceNum
+      });
 
-      $$("#grip-data").html('<p id="grip-data" class="sensor-data no-margin-vertical">'+force+'</p>');
+      //$$("#grip-data").html('<p id="grip-data" class="sensor-data no-margin-vertical">'+force+'</p>');
       //console.log(message);
-
-      //resultDiv.innerHTML = resultDiv.innerHTML + message + "<br/>";
-      /*$$("#sens-onData").append(
-        "<br>" + message + "<br/>"
-      );*/
-      //resultDiv.scrollTop = resultDiv.scrollHeight;
     },
     writeData: function(buffer, success, failure){ // to to be sent to MetaWear
       /*if (!success)
@@ -402,44 +396,228 @@ $$(document).on('deviceready', function(){
   console.log("Device is ready!");
 });
 
-//Sensor calibration screen
-$$(document).on('page:init', '.page[data-name="warmup"]', function (e) {
+//Global variables
+var warmupGauge, timerGauge, warmupTimer, intialTimer, round = 1, assessmentTitle;
+//Global variables
 
-  $$("#warmup-cancel").on('click', function(){
+//Timed assessment screen functions
+function initialState(){
+  warmupGauge.update({
+    el: '#warmup-gauge',
+    type: 'semicircle',
+    size: 250,
+    value: 0,
+    valueText: '0',
+    borderColor: "#4caf50",
+    borderWidth: 30,
+    labelText: "Kg.",
+    //labelTextColor: "",
+    labelFontSize: 15,
+    labelFontWeight: 30
+  });
+
+  timerGauge.update({
+    el: '#timer-gauge',
+    type: 'circle',
+    value: 0,
+    valueText: "Ready?",
+    size: 100,
+    valueFontSize: 30,
+    borderColor: "#2196f3",
+    borderWidth: 10,
+  });
+
+  round = 1;
+  disableResetButton();
+  changeLabels();
+
+  intialTimer.stop();
+  warmupTimer.stop();
+}
+
+function enableStartButton(){
+  $$("#start-assessment").removeClass("disabled");
+  $$("#start-assessment").addClass("button-fill");
+}
+
+function disableStartButton(){
+  $$("#start-assessment").addClass("disabled");
+  $$("#start-assessment").removeClass("button-fill");
+}
+
+function enableResetButton(){
+  $$("#reset-assessment").removeClass("disabled");
+  $$("#reset-assessment").addClass("button-fill");
+}
+
+function disableResetButton(){
+  $$("#reset-assessment").addClass("disabled");
+  $$("#reset-assessment").removeClass("button-fill");
+}
+
+function changeLabels(){
+  $$("#assessment-screen-round").html("Round " + round);
+  enableStartButton();
+}
+
+function resetStartLabel(){
+  $$("#start-assessment").html("Start");
+  $$("#start-assessment").removeClass("color-black");
+  $$("#start-assessment").addClass("color-green");
+}
+//Timed assessment screen functions
+
+//Calibration screen
+$$(document).on('page:afterin', '.page[data-name="calibration"]', function (e) {
+  assessmentTitle = "Sensor Calibration";
+});
+//Calibration screen
+
+//Timed assessment screen
+$$(document).on('page:mounted', '.page[data-name="assessment"]', function (e) {
+  $$("#assessment-screen-title").html(assessmentTitle);
+});
+
+$$(document).on('page:init', '.page[data-name="assessment"]', function (e) {
+  //Gauges initialization
+  warmupGauge = app.gauge.create({
+    el: '#warmup-gauge',
+    type: 'semicircle',
+    size: 250,
+    value: 0,
+    valueText: '0',
+    borderColor: "#4caf50",
+    borderWidth: 30,
+    labelText: "Kg.",
+    labelFontSize: 15,
+    labelFontWeight: 30
+  });
+
+  timerGauge = app.gauge.create({
+    el: '#timer-gauge',
+    type: 'circle',
+    value: 0,
+    valueText: "Ready?",
+    size: 100,
+    valueFontSize: 30,
+    borderColor: "#2196f3",
+    borderWidth: 10,
+    valueTextColor: '#2196f3'
+  });
+  //Gauges initialization
+
+  var warmupTime = 11;
+  warmupTimer = new Timer({
+    tick    : 1,
+    ontick  : function(ms) {
+                var seconds = ((ms % 60000) / 1000).toFixed(0);
+                var timePercentage = seconds/10;
+                timerGauge.update({
+                  value: timePercentage,
+                  valueText: seconds
+                });
+              },
+    onstop  : function(){
+                initialState();
+              },
+    onend   : function() {
+                timerGauge.update({
+                  value: 0,
+                  valueFontSize: 35,
+                  valueText: "Finish"
+                });
+                if(round == 3){
+                  resetStartLabel();
+                  enableResetButton();
+                }
+                else{
+                  round++;
+                  changeLabels();
+                }
+              }
+  });
+
+  var intialTime = 3;
+  intialTimer = new Timer({
+    tick    : 1,
+    onstart : function() {
+                timerGauge.update({
+                  valueText: "3",
+                  valueFontSize: 40,
+                  labelText: "Seconds",
+                  valueTextColor: '#F1C40F'
+                });
+              },
+    onstop  : function(){
+                initialState();
+              },
+    ontick  : function(ms) {
+                var seconds = ((ms % 60000) / 1000).toFixed(0);
+                timerGauge.update({
+                  valueText: seconds,
+                  labelText: "Seconds"
+                });
+              },
+    onend   : function() {
+                timerGauge.update({
+                  value: 10,
+                  valueText: "Go!",
+                  valueTextColor: '#2196f3'
+                });
+                warmupTimer.start(warmupTime);
+              }
+  });
+
+  $$("#cancel-assessment").on('click', function(){
     grip.disconnectGrip();
   });
 
-  $$("#start-warmup").on('click', function(){
-    //var warmupTimer = new Timer();
-    var warmupTime = 10; // 15 minutes
+  $$("#start-assessment").on('click', function(){
+    //grip.refreshDeviceList();
+    disableStartButton();
+    intialTimer.start(intialTime);
+  });
 
-    var warmupTimer = new Timer({
-      tick    : 1,
-      ontick  : function(ms) {
-                  var seconds = ((ms % 60000) / 1000).toFixed(0);
-                  $$(".time").html('<p class="time no-margin-vertical">'+ seconds +'</p>');
-                },
-      onend   : function() {
-                  $$(".time").html('<p class="time no-margin-vertical">Done</p>');
-                }
-    });
-    warmupTimer.start(warmupTime);
-
-    grip.refreshDeviceList();
-
-
-
-    /*warmupTimer.start(warmupTime).on('end', function () {
-      console.log('Timer done');
-    })
-    .on('ontick', function () {
-      //$$("#time").html('<span id="time">'+ ms +'</span>');
-      console.log(warmupTimer.getDuration());
-    });*/
+  $$("#reset-assessment").on('click', function(){
+    initialState();
   });
 });
-//Sensor calibration screen
 
-$$("#motor").on('click', function(){
-  //sens.onMotorButton();
+$$(document).on('page:afterout', '.page[data-name="assessment"]', function (e) {
+  initialState();
 });
+//Timed assessment screen
+
+//Programs screen
+$$(document).on('page:beforein', '.page[data-name="programs"]', function (e) {
+  assessmentTitle = "Program";
+});
+//Programs screen
+
+//Stats screen
+$$(document).on('page:init', '.page[data-name="stats"]', function (e) {
+
+  var friedCanvas = $$("#fried-canvas")[0].getContext('2d');
+  var friedAssessment = new Chart(friedCanvas, {
+    type: 'radar',
+    data: {
+        labels: ['Weight loss', 'Weakness', 'Exhaustion', 'Slowness', 'Low physical activity'],
+        datasets: [{
+            data: [20, 10, 4, 2, 20]
+        }]
+    },
+    options: {
+        scale: {
+            angleLines: {
+                display: false
+            },
+            ticks: {
+                suggestedMin: 50,
+                suggestedMax: 100
+            }
+        }
+    }
+  });
+
+});
+//Stats screen

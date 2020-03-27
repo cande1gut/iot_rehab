@@ -96,12 +96,17 @@
   height: 60px;
 }
 
-.time{
-  font-size: 25vw;
-}
-
 .sensor-data{
   font-size: 5vw;
+}
+
+.assessment-demo{
+  width: 40%;
+  border-radius: 10px;
+}
+
+#status-label{
+  font-weight: bold;
 }
 
 .demo-facebook-card .card-header {
