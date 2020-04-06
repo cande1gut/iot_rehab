@@ -15,7 +15,7 @@
   </div>
 
   <div id="register-screen" class="page-content">
-    <form id="register-form">
+    <form id="criteria-form" onsubmit="return false;">
       <div class="list no-hairlines-md margin-vertical-half">
         <ul>
           <li class="item-content item-input">
@@ -25,7 +25,7 @@
             <div class="item-inner">
               <div class="item-title item-floating-label">Age</div>
               <div class="item-input-wrap">
-                <input type="text" placeholder="Your age" validate pattern="[0-9]*" data-error-message="Enter a valid age">
+                <input name="criteria-age" type="text" placeholder="Your age" validate pattern="[0-9]*" data-error-message="Enter a valid age">
                 <span class="input-clear-button"></span>
               </div>
             </div>
@@ -35,9 +35,19 @@
               <i class="f7-icons">info</i>
             </div>
             <div class="item-inner">
-              <div class="item-title item-floating-label">BMI</div>
               <div class="item-input-wrap">
-                <input type="text" placeholder="Your current BMI" validate pattern="[0-9]+([,\.][0-9]+)?" data-error-message="Enter a valid BMI">
+                <input id="bmi-value" name="criteria-bmi" type="text" placeholder="Your BMI" readonly>
+              </div>
+            </div>
+          </li>
+          <li class="item-content item-input">
+            <div class="item-media">
+              <i class="f7-icons">info</i>
+            </div>
+            <div class="item-inner">
+              <div class="item-title item-floating-label">Height (m.)</div>
+              <div class="item-input-wrap">
+                <input name="criteria-height" id="height-value" type="text" placeholder="Your current height in m." required validate pattern="[0-9]+([,\.][0-9]+)?" data-error-message="Enter a valid height" onchange="calculateBMI()">
                 <span class="input-clear-button"></span>
               </div>
             </div>
@@ -47,9 +57,9 @@
               <i class="f7-icons">info</i>
             </div>
             <div class="item-inner">
-              <div class="item-title item-floating-label">Height</div>
+              <div class="item-title item-floating-label">Weight (Kg.)</div>
               <div class="item-input-wrap">
-                <input type="text" placeholder="Your current height" validate pattern="[0-9]+([,\.][0-9]+)?" data-error-message="Enter a valid height">
+                <input name="criteria-weight" id="weight-value" type="text" placeholder="Your current weight in Kg." required validate pattern="[0-9]+([,\.][0-9]+)?" data-error-message="Enter a valid weight" onchange="calculateBMI()">
                 <span class="input-clear-button"></span>
               </div>
             </div>
@@ -59,10 +69,44 @@
               <i class="f7-icons">info</i>
             </div>
             <div class="item-inner">
-              <div class="item-title item-floating-label">Weight</div>
-              <div class="item-input-wrap">
-                <input type="text" placeholder="Your current weight" validate pattern="[0-9]+([,\.][0-9]+)?" data-error-message="Enter a valid weight">
-                <span class="input-clear-button"></span>
+              <div class="item-title item-floating-label">Do you feel full of energy?</div>
+              <div class="item-input-wrap input-dropdown-wrap">
+                <select name="criteria-energy" required validate>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                </select>
+              </div>
+            </div>
+          </li>
+          <li class="item-content item-input">
+            <div class="item-media">
+              <i class="f7-icons">info</i>
+            </div>
+            <div class="item-inner">
+              <div class="item-title item-floating-label">How often you rested in bed during day?</div>
+              <div class="item-input-wrap input-dropdown-wrap">
+                <select name="criteria-bed" required validate>
+                  <option value="EveryDay">Every day</option>
+                  <option value="EveryWeek">Every Week</option>
+                  <option value="Once">Once</option>
+                  <option value="notAtAll">Not at all</option>
+                </select>
+              </div>
+            </div>
+          </li>
+          <li class="item-content item-input">
+            <div class="item-media">
+              <i class="f7-icons">info</i>
+            </div>
+            <div class="item-inner">
+              <div class="item-title item-floating-label">Frequency of physical activity</div>
+              <div class="item-input-wrap input-dropdown-wrap">
+                <select name="criteria-physical" required validate>
+                  <option value="less3Week">≥3 times per week</option>
+                  <option value="more1">1-2 times per week</option>
+                  <option value="less3Month">1-3 times per month</option>
+                  <option value="never">Hardly ever/never</option>
+                </select>
               </div>
             </div>
           </li>
@@ -73,7 +117,7 @@
             <div class="item-inner">
               <div class="item-title item-floating-label">Medical Conditions</div>
               <div class="item-input-wrap">
-                <textarea class="resizable"></textarea>
+                <textarea name="criteria-conditions" class="resizable"></textarea>
               </div>
             </div>
           </li>

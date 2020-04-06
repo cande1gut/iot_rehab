@@ -105,31 +105,33 @@
   border-radius: 10px;
 }
 
+.connection{
+  float: right;
+  position: absolute;
+}
+
+#assessment-screen-type{
+  display: none;
+}
+
+#device-pairing{
+  width: 20%;
+  right: 0;
+  top: 56px;
+}
+
+#device-connected{
+  width: 4%;
+  top: 5.7em;
+  right: 2.3em;
+  display: none;
+}
+
 #status-label{
   font-weight: bold;
 }
 
-.demo-facebook-card .card-header {
-  display: block;
-  padding: 10px;
-}
-.demo-facebook-card .demo-facebook-name {
-  font-size: 14px;
-  font-weight: 500;
-}
-.demo-facebook-card .card-footer {
-  background: #fafafa;
-}
-.demo-facebook-card .card-footer a {
-  color: #81848b;
-  font-weight: 500;
-}
-.demo-facebook-card .card-content img {
-  display: block;
-}
-.demo-facebook-card .card-content-padding {
-  padding: 15px 10px;
-}
-.demo-facebook-card .card-content-padding .likes {
-  color: #8e8e93;
+.card-image-resize{
+  width: 100%;
+  height: auto;
 }

@@ -2,17 +2,24 @@
   <div id="exercise-nav" class="navbar">
     <div class="navbar-bg"></div>
     <div class="navbar-inner sliding">
+      <div class="left">
+        <a id="assessment-popover" href="#" class="link popover-open" data-popover="">
+          <i class="icon f7-icons color-blue">question_circle_fill</i>
+        </a>
+      </div>
+      <div id="assessment-screen-title" class="title"></div>
       <div class="right">
         <a id="cancel-assessment" class="link back color-red">
           Close
         </a>
       </div>
-      <div id="assessment-screen-title" class="title"></div>
     </div>
   </div>
 
+  <img class="connection" id="device-pairing" src="assets/img/looking.gif"></img>
+  <img class="connection" id="device-connected" src="assets/img/connected.png"></img>
   <div class="page-content display-flex justify-content-center align-items-center">
-    <div>
+    <div id="assessment-section">
       <div id="assessment-screen-round" class="block-title-large text-align-center">
         Round 1
       </div>
@@ -24,6 +31,7 @@
       <div class="block no-padding">
         <div class="metric-container display-flex justify-content-center">
           <div id="warmup-gauge" class="gauge"></div>
+          <div id="calibration-gauge" class="gauge"></div>
         </div>
       </div>
       <div class="block row no-padding">
@@ -31,12 +39,44 @@
           <button id="reset-assessment" class="color-orange button-outline button button-raised disabled">Reset</button>
         </div>
         <div class="col-50 padding-right">
-          <button id="start-assessment" class="color-green button-outline button button-raised button-fill">Start</button>
+          <button id="start-assessment" class="color-green button-outline button button-raised disabled">Start</button>
+          <button id="save-calibration" class="color-blue button-outline button button-raised button-fill" style="display:none;">Save</button>
         </div>
       </div>
-      <div class="block row no-padding no-margin display-flex justify-content-center">
+    </div>
+  </div>
+
+  <div class="popover popover-sens">
+    <div class="popover-inner">
+      <div class="padding display-flex justify-content-center align-items-center">
+        <a href="#" class="link popover-close color-black" style="position: absolute; right: 15px; top: 15px">
+          <i class="icon f7-icons">multiply_circle_fill</i>
+        </a>
+        <img class="assessment-demo" src="assets/img/sens-test.gif"></img>
+      </div>
+    </div>
+  </div>
+
+  <div class="popover popover-plates">
+    <div class="popover-inner">
+      <div class="padding display-flex justify-content-center align-items-center">
+        <a href="#" class="link popover-close color-black" style="position: absolute; right: 15px; top: 15px">
+          <i class="icon f7-icons">multiply_circle_fill</i>
+        </a>
+        <img class="assessment-demo" src="assets/img/plates-test.gif"></img>
+      </div>
+    </div>
+  </div>
+
+  <div class="popover popover-grip">
+    <div class="popover-inner">
+      <div class="padding display-flex justify-content-center align-items-center">
+        <a href="#" class="link popover-close color-black" style="position: absolute; right: 15px; top: 15px">
+          <i class="icon f7-icons">multiply_circle_fill</i>
+        </a>
         <img class="assessment-demo" src="assets/img/grip-test.gif"></img>
       </div>
     </div>
   </div>
+
 </div>

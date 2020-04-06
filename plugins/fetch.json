@@ -102,5 +102,21 @@
     },
     "is_top_level": true,
     "variables": {}
+  },
+  "com.lisaseacat.metawear": {
+    "source": {
+      "type": "registry",
+      "id": "com.lisaseacat.metawear"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "com.megster.cordova.ble": {
+    "source": {
+      "type": "registry",
+      "id": "com.megster.cordova.ble"
+    },
+    "is_top_level": false,
+    "variables": {}
   }
 }

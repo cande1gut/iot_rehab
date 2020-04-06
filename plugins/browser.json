@@ -39,6 +39,9 @@
     },
     "cordova-plugin-ble-central": {
       "PACKAGE_NAME": "com.phonegap.helloworld"
+    },
+    "com.lisaseacat.metawear": {
+      "PACKAGE_NAME": "com.phonegap.helloworld"
     }
   },
   "dependent_plugins": {
@@ -46,6 +49,9 @@
       "PACKAGE_NAME": "com.phonegap.helloworld"
     },
     "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.phonegap.helloworld"
+    },
+    "com.megster.cordova.ble": {
       "PACKAGE_NAME": "com.phonegap.helloworld"
     }
   }

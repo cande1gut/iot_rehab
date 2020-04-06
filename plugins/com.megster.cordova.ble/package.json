@@ -1,0 +1,51 @@
+{
+  "_from": "com.megster.cordova.ble",
+  "_id": "com.megster.cordova.ble@0.1.9",
+  "_inBundle": false,
+  "_integrity": "sha512-5k5oVl6AkVohDs3epAJQiFC0NaxwGggWP5fDh30UIJ8vQTICwZPqVFYWAr8FkgBAOnb/rEDgGaS4SqdgzhFc3g==",
+  "_location": "/com.megster.cordova.ble",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "com.megster.cordova.ble",
+    "name": "com.megster.cordova.ble",
+    "escapedName": "com.megster.cordova.ble",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/com.megster.cordova.ble/-/com.megster.cordova.ble-0.1.9.tgz",
+  "_shasum": "745b3ea5561c7a2be606c403b059b326d04df2db",
+  "_spec": "com.megster.cordova.ble",
+  "_where": "/Users/cande/Desktop/KRehab",
+  "bundleDependencies": false,
+  "cordova_name": "BLE",
+  "deprecated": false,
+  "description": "Bluetooth Low Energy (BLE) Central Plugin",
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.1.0"
+    }
+  ],
+  "issue": "https://github.com/don/cordova-plugin-ble-central/issues",
+  "keywords": [
+    "bluetooth",
+    "BLE",
+    "bluetooth low energy"
+  ],
+  "license": "Apache 2.0",
+  "name": "com.megster.cordova.ble",
+  "platforms": [
+    "ios",
+    "android",
+    "wp8"
+  ],
+  "repo": "https://github.com/don/cordova-plugin-ble-central.git",
+  "version": "0.1.9"
+}

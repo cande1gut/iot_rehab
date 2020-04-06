@@ -420,6 +420,22 @@ module.exports = [
         "merges": [
             "ble"
         ]
+    },
+    {
+        "file": "plugins/com.megster.cordova.ble/www/ble.js",
+        "id": "com.megster.cordova.ble.ble",
+        "pluginId": "com.megster.cordova.ble",
+        "clobbers": [
+            "ble"
+        ]
+    },
+    {
+        "file": "plugins/com.lisaseacat.metawear/www/metawear.js",
+        "id": "com.lisaseacat.metawear.metawear",
+        "pluginId": "com.lisaseacat.metawear",
+        "clobbers": [
+            "metawear"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -437,7 +453,9 @@ module.exports.metadata =
     "cordova-plugin-media-capture": "1.4.3",
     "cordova-plugin-network-information": "1.3.4",
     "cordova-plugin-vibration": "2.1.6",
-    "cordova-plugin-ble-central": "1.2.4"
+    "cordova-plugin-ble-central": "1.2.4",
+    "com.megster.cordova.ble": "0.1.9",
+    "com.lisaseacat.metawear": "0.0.2"
 }
 // BOTTOM OF METADATA
 });

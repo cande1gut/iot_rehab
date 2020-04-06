@@ -1,0 +1,34 @@
+{
+  "man": [
+    {
+      "bmi": [0, 24],
+      "strength": 29
+    },
+    {
+      "bmi": [24.1, 28],
+      "strength": 30
+    },
+    {
+      "bmi": 29,
+      "strength": 32
+    }
+  ],
+  "woman": [
+    {
+      "bmi": [0, 23],
+      "strength": 17
+    },
+    {
+      "bmi": [23.1, 26],
+      "strength": 17.3
+    },
+    {
+      "bmi": [26.1, 29],
+      "strength": 18
+    },
+    {
+      "bmi": 29,
+      "strength": 21
+    }
+  ]
+}

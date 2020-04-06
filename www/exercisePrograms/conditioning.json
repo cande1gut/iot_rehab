@@ -1,0 +1,102 @@
+{
+  "Seated Bicep Curls":{
+    "Indications":
+    [
+      "Grab a pair of dumbbells or a resistance band.",
+      "If using a resistance band, slide it under the seat, or sit on it, until it’s at an equal length on either side of the body.",
+      "Sit comfortably in the chair with the hips as far back as possible. Ensure that the back is firm to the backrest of the chair.",
+      "Keep the core (abs and lumbar) tight. Stick the chest out.",
+      "Keep both arms to the sides of the body, let them hang naturally with both palms facing forward, keeping the elbows tucked (at the sides of your body).",
+      "Proceed to move both forearms in a curling motion from the sides of the body to the front of the shoulders (the senior doesn’t have to touch their hands to their shoulders for full range of motion).",
+      "While keeping tension, slowly lower both forearms back to the starting position."
+    ],
+    "Picture": "",
+    "Frequency": "2-3 days per week.",
+    "Intensity": "Light",
+    "Time": "20-60 minutes per day.",
+    "Sensor": "Sens"
+  },
+  "Isolated Tricep Extensions":{
+    "Indications":
+    [
+      "Grab a dumbbell.",
+      "Sit comfortably in the chair with the hips as far back as possible. Ensure that the back is firm to the backrest of the chair.",
+      "Keep the core (abs and lumbar) tight. Stick the chest out.",
+      "Keep both elbows high, in front of the body and one hand lowered behind the head creating a “V” shape. Use the other hand to brace the arm just under the elbow. Keep the helping hand in this position (without applying too much pressure). The hand with a dumbbell should have its palm facing toward the head.",
+      "Raise the one arm with a dumbbell over the head until it is fully extended.",
+      "Slowly lower the forearm back to the starting position.",
+      "Repeat for both arms."
+    ],
+    "Picture": "",
+    "Frequency": "2-3 days per week.",
+    "Intensity": "Light",
+    "Time": "20-60 minutes per day.",
+    "Sensor": "Sens"
+  },
+  "Sit-to-Stands (Chair Squat)":{
+    "Indications":
+    [
+      "Sit comfortably in the chair toward the edge of the seat.",
+      "Keep the core (abs and lumbar) tight. Stick the chest out.",
+      "Ensure the toes are pointed forward or slightly outward to both sides; keep both hands in front of the body in a comfortable position for balance.",
+      "Slowly, sit up from the chair until fully standing. Check the knee placement when moving from sitting to standing so they aren’t bending inward; instead, they should be projecting outward from the middle of the body. This exercise requires using the hips, not the knees, to thrust the body to a standing position.",
+      "Sit back down, while checking for that knee placement, to starting position"
+    ],
+    "Picture": "",
+    "Frequency": "2-3 days per week.",
+    "Intensity": "Light",
+    "Time": "20-60 minutes per day.",
+    "Sensor": "Plates"
+  },
+  "Knee Extensions":{
+    "Indications":
+    [
+      "Sit comfortably in the chair with the hips as far back as possible. Ensure that the back is firm to the backrest of the chair.",
+      "Keep the core (abs and lumbar) tight. Stick the chest out.",
+      "Place both hands at the sides of the chair and grip the seat to keep stable.",
+      "Keep both legs at a 90-degree angle with the chair.",
+      "Extend one leg in front of the body up in the air until full extension is made. Keep the other leg in its original position for stability.",
+      "Slowly draw the one leg back to starting position.",
+      "Repeat for both legs to count as one set."
+    ],
+    "Picture": "",
+    "Frequency": "2-3 days per week.",
+    "Intensity": "Light",
+    "Time": "20-60 minutes per day.",
+    "Sensor": "Sens"
+  },
+  "Heel Slides":{
+    "Indications":
+    [
+      "Sit comfortably in the chair toward the edge of the seat.",
+      "Keep the core (abs and lumbar) tight. Stick the chest out.",
+      "Place both hands at the sides of the chair and grip the seat to keep stable.",
+      "Extend one leg far out in front of the body and point the toes forward. The extended leg’s foot should be diagonal to the hips. If using a blanket or other item, place the foot on top. The other leg should be naturally bent, close to the body with the foot planted on the floor.",
+      "With the extended leg, keep the foot flat, push against the floor and drag the foot slowly toward the body until it reaches the flexed position of the other leg.",
+      "While keeping pressure, extend the leg back to the starting position.",
+      "A single rep is when performing the full movement of pulling then pushing the foot back to the starting position."
+    ],
+    "Picture": "",
+    "Frequency": "2-3 days per week.",
+    "Intensity": "Light",
+    "Time": "20-60 minutes per day.",
+    "Sensor": "Sens"
+  },
+  "Seated Calf Raises":{
+    "Indications":
+    [
+      "Sit comfortably in the chair with the hips as far back as possible. Ensure that the back is firm to the backrest of the chair.",
+      "Keep the core (abs and lumbar) tight. Stick the chest out.",
+      "Place both hands at the sides of the chair and grip the seat to keep stable.",
+      "Keep both legs at a 90-degree angle with the chair. Both feet should be flat on the floor.",
+      "Slowly, extend the heels of your feet upward, pushing the toes on the ground and lifting the heels in the air.",
+      "Place both feet back to the starting position.",
+      "Repeat this movement for 20 or more reps to create a “burning” feeling in the calves."
+    ],
+    "Picture": "",
+    "Frequency": "2-3 days per week.",
+    "Intensity": "Light",
+    "Time": "20-60 minutes per day.",
+    "Sensor": "Plates"
+  },
+}

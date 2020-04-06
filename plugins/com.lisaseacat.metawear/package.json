@@ -1,0 +1,51 @@
+{
+  "_from": "com.lisaseacat.metawear",
+  "_id": "com.lisaseacat.metawear@0.0.2",
+  "_inBundle": false,
+  "_integrity": "sha512-P6FOk/Z4c1mRhaJy8Gw1fOS7VlOM/rmwvDaLtSmdv7aFVxfroEjofxbLtgND3NBBaYrjb8096SmFsXF2PGNM2A==",
+  "_location": "/com.lisaseacat.metawear",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "com.lisaseacat.metawear",
+    "name": "com.lisaseacat.metawear",
+    "escapedName": "com.lisaseacat.metawear",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/com.lisaseacat.metawear/-/com.lisaseacat.metawear-0.0.2.tgz",
+  "_shasum": "17303a023be278a83ca7ffbec90802f81da550bd",
+  "_spec": "com.lisaseacat.metawear",
+  "_where": "/Users/cande/Desktop/KRehab",
+  "bundleDependencies": false,
+  "cordova_name": "Metawear Cordova Plugin",
+  "deprecated": false,
+  "description": "An Apache Cordova plugin to interact with a metaware board on your hybrid app",
+  "engines": [],
+  "keywords": [
+    "cordova",
+    "lisa seacat",
+    " lisa seacat deluca",
+    " metaware",
+    " bluetooth",
+    " ble",
+    " LED",
+    " neopixel",
+    " sensors",
+    " accelerometer",
+    " temperature",
+    " mbient"
+  ],
+  "name": "com.lisaseacat.metawear",
+  "platforms": [
+    "android",
+    "ios"
+  ],
+  "version": "0.0.2"
+}

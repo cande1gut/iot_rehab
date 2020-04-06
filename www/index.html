@@ -42,40 +42,42 @@
           </video>
           <div class="block">
             <div class="login-screen-title margin-bottom-half">K-Rehab</div>
-            <div class="list no-hairlines-md no-margin-top">
-              <ul>
-                <li class="item-content item-input">
-                  <div class="item-media">
-                    <i class="f7-icons">envelope_fill</i>
-                  </div>
-                  <div class="item-inner">
-                    <div class="item-title item-floating-label">E-mail</div>
-                    <div class="item-input-wrap">
-                      <input type="email" placeholder="Your e-mail">
-                      <span class="input-clear-button"></span>
+            <form id="login-form" onsubmit="return false;">
+              <div class="list no-hairlines-md no-margin-top">
+                <ul>
+                  <li class="item-content item-input">
+                    <div class="item-media">
+                      <i class="f7-icons">person_alt</i>
                     </div>
-                  </div>
-                </li>
-                <li class="item-content item-input">
-                  <div class="item-media">
-                    <i class="f7-icons">lock_fill</i>
-                  </div>
-                  <div class="item-inner">
-                    <div class="item-title item-floating-label">Password</div>
-                    <div class="item-input-wrap">
-                      <input type="password" placeholder="Your password">
-                      <span class="input-clear-button"></span>
+                    <div class="item-inner">
+                      <div class="item-title item-floating-label">Name</div>
+                      <div class="item-input-wrap">
+                        <input name="login-name" type="text" placeholder="Your Name">
+                        <span class="input-clear-button"></span>
+                      </div>
                     </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="block row col-50 display-flex justify-content-center">
-              <div class="col-60">
-                <button id="login-button" class="button color-blue button-large button-raised button-fill button-round margin-bottom-half">Login</button>
-                <button id="register-button" class="button color-blue button-large button-round button-outline popup-open">Register</button>
+                  </li>
+                  <li class="item-content item-input">
+                    <div class="item-media">
+                      <i class="f7-icons">lock_fill</i>
+                    </div>
+                    <div class="item-inner">
+                      <div class="item-title item-floating-label">Password</div>
+                      <div class="item-input-wrap">
+                        <input name="login-password" type="password" placeholder="Your password">
+                        <span class="input-clear-button"></span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
               </div>
-            </div>
+              <div class="block row col-50 display-flex justify-content-center">
+                <div class="col-60">
+                  <button id="login-button" class="button color-blue button-large button-raised button-fill button-round margin-bottom-half">Login</button>
+                  <button id="register-button" class="button color-blue button-large button-round button-outline popup-open">Register</button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -91,6 +93,8 @@
   <script src="js/timer.js"></script>
   <script src="js/moment.js"></script>
   <script src="js/chart.js"></script>
+  <script src="js/movingAverage.js"></script>
+  <script src="js/quicksort.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>
