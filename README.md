@@ -1,58 +1,23 @@
 # KRehab
-
-## Framework7 CLI Options
-
-Framework7 app created with following options:
+In order to deploy this project you need to first download and install the phonegap cli through npm:
 
 ```
-{
-  "cwd": "/Users/cande/Desktop/KRehab",
-  "type": [
-    "web"
-  ],
-  "name": "KRehab",
-  "framework": "core",
-  "template": "tabs",
-  "bundler": false,
-  "theming": {
-    "customColor": false,
-    "color": "#007aff",
-    "darkTheme": false,
-    "iconFonts": true,
-    "fillBars": false
-  },
-  "customBuild": false
-}
+$ npm install -g phonegap@latest
 ```
 
-## NPM Scripts
+## Start project locally
 
-* 🔥 `start` - run development server
-* 🔧 `serve` - run development server
-## Assets
-
-Assets (icons, splash screens) source images located in `assets-src` folder. To generate your own icons and splash screen images, you will need to replace all assets in this directory with your own images (pay attention to image size and format), and run the following command in the project directory:
+After the phonegap cli installation, you will need to get into the project folder and once inside the folder execute:
 
 ```
-framework7 generate-assets
+phonegap serve
 ```
 
-Or launch UI where you will be able to change icons and splash screens:
+The project will deploy in a local server and now you should be able to access to the application through the IP address that the phonegap cli provided.
 
-```
-framework7 generate-assets --ui
-```
+To be able to use bluetooth connectivity you need to access to the app through their visualizer: http://docs.phonegap.com/getting-started/2-install-mobile-app/, or you could build the application into an .apk or .ipa. through the phonegap cloud builder: https://build.phonegap.com/
 
 ## Documentation & Resources
 
+* [Phonegap Documentation](http://docs.phonegap.com/)
 * [Framework7 Core Documentation](https://framework7.io/docs/)
-
-
-
-* [Framework7 Icons Reference](https://framework7.io/icons/)
-* [Community Forum](https://forum.framework7.io)
-
-## Support Framework7
-
-Love Framework7? Support project by donating or pledging on patreon:
-https://patreon.com/vladimirkharlampidi
