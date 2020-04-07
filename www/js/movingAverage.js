@@ -1,3 +1,5 @@
+//author: https://github.com/doowb/sma
+
 function sma(arr, range, format) {
   if (!Array.isArray(arr)) {
     throw TypeError('expected first argument to be an array');

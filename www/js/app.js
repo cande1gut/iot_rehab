@@ -42,7 +42,7 @@ var app = new Framework7({
   routes: routes,
 });
 var mainView = app.views.create('.view-main', {
-  pushState: false
+  pushState: true
 });
 //F7 initialization
 
@@ -419,7 +419,7 @@ $$("#login-button").on('click', function(){
   //formData["login-password"]
   //formData["login-name"]
   var formData = app.form.convertToData('#login-form');
-  app.request.post('http://142.244.87.239:8080/vibrantminds2/api/token_login', { "username": "participant1", "password": "123test123" }, function (data) {
+  app.request.post('http://142.244.87.239:8080/vibrantminds2/api/token_login', { "username": formData["login-name"], "password": formData["login-password"] }, function (data) {
     //Login Auth
     mainView.router.navigate({
       name: 'calibration',
@@ -480,8 +480,7 @@ $$(document).on('page:init', '.page[data-name="criteria"]', function (e) {
   //Register new user screen
   $$("#save-button").on('click', function(){
     var formData = app.form.convertToData('#criteria-form');
-    alert(JSON.stringify(formData));
-
+    //alert(JSON.stringify(formData));
   });
   //Register new user screen
 });

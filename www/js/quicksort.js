@@ -1,3 +1,5 @@
+//author: https://khan4019.github.io/front-end-Interview-Questions/sort.html#quickSort
+
 function quickSort(arr, left, right){
    var len = arr.length,
    pivot,
